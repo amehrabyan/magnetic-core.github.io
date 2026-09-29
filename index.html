@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pixigo — home to Magnetic Core. Discover our game and read its privacy policy.">
+  <meta name="theme-color" content="#f8faff">
+  <title>Pixigo · A little space for play</title>
+  <style>
+    :root { color-scheme:light; --ink:#1a2340; --muted:#566079; --blue:#365ac9; --line:#e4e8f0; --bg:#f8faff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+    a { color:var(--blue); text-underline-offset:4px; }
+    a:focus-visible { outline:3px solid #7e9af0; outline-offset:6px; }
+    .wrap { width:min(1080px,100% - 48px); margin-inline:auto; }
+    header { padding-block:30px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { color:var(--ink); font-weight:800; font-size:24px; letter-spacing:-1px; text-decoration:none; }
+    .brand span { color:var(--blue); }
+    header > a:last-child { font-size:14px; text-decoration:none; }
+    .hero { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:48px; min-height:560px; padding-block:64px 96px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; color:var(--blue); }
+    h1 { font-size:clamp(48px,6.5vw,78px); line-height:1.04; letter-spacing:-.065em; font-weight:750; margin:22px 0; max-width:650px; }
+    .intro { max-width:390px; font-size:19px; color:var(--muted); }
+    .orbit { position:relative; aspect-ratio:1; width:100%; max-width:390px; justify-self:center; border:1px solid #d7dff3; border-radius:50%; background:radial-gradient(circle,#dfe7ff 0,transparent 68%); }
+    .orbit::before,.orbit::after { content:""; position:absolute; border:1px solid #c4d1f1; border-radius:50%; inset:15%; }
+    .orbit::after { inset:30%; border-color:#a2b5e7; }
+    .core { position:absolute; inset:39%; border-radius:28%; background:var(--blue); transform:rotate(-16deg); box-shadow:10px 18px 35px #365ac92b, inset 2px 2px 2px #ffffff40; }
+    .satellite { position:absolute; width:28px; height:28px; border-radius:50%; background:#e5a787; top:8%; left:18%; box-shadow:0 0 0 7px var(--bg); }
+    .satellite.small { width:16px; height:16px; top:auto; left:auto; bottom:17%; right:13%; background:#7893dc; }
+    .game { background:#fff; border:1px solid var(--line); border-radius:20px; padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; }
+    .game .eyebrow { margin:0 0 8px; }
+    h2 { font-size:30px; letter-spacing:-.035em; line-height:1.2; margin:0 0 8px; }
+    .game p:last-child { color:var(--muted); margin:0; }
+    .policy-link { display:inline-flex; gap:24px; align-items:center; white-space:nowrap; font-weight:600; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:13px 20px; }
+    .policy-link:hover { background:#f0f4ff; border-color:#c4d1f1; }
+    footer { padding-block:34px; margin-top:60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
+    footer p { margin:0; }
+    @media(max-width:680px) {
+      .wrap { width:calc(100% - 40px); }
+      header { padding-block:22px; }
+      .hero { grid-template-columns:1fr; gap:36px; min-height:0; padding-block:44px 52px; }
+      h1 { max-width:440px; }
+      .intro { font-size:17px; }
+      .orbit { max-width:260px; }
+      .game { align-items:flex-start; flex-direction:column; padding:28px; gap:24px; }
+      footer { margin-top:44px; flex-direction:column; gap:8px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="./" aria-label="Pixigo home">pixigo<span>.</span>ai</a>
+    <a href="privacy-policy/">Privacy policy</a>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="welcome">
+      <div>
+        <p class="eyebrow">Welcome to Pixigo</p>
+        <h1 id="welcome">A little space<br>for play.</h1>
+        <p class="intro">Home to Magnetic Core, a puzzle game for curious minds.</p>
+      </div>
+      <div class="orbit" aria-hidden="true"><div class="core"></div><div class="satellite"></div><div class="satellite small"></div></div>
+    </section>
+    <section class="game" aria-labelledby="game-title">
+      <div>
+        <p class="eyebrow">Our game</p>
+        <h2 id="game-title">Magnetic Core</h2>
+        <p>A puzzle game by Pixigo.</p>
+      </div>
+      <a class="policy-link" href="privacy-policy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="wrap">
+    <p>© 2026 Pixigo</p>
+    <p>Privacy questions? <a href="mailto:privacy@pixigo.ai">privacy@pixigo.ai</a></p>
+  </footer>
+</body>
+</html>
