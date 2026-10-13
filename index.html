@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pixigo — home to Magnetic Core. Discover our game and read its privacy policy.">
+  <meta name="description" content="Pixigo — home to Magnetic Core and PixiGo Draw. Discover our apps and read their privacy policies.">
   <meta name="theme-color" content="#f8faff">
   <title>Pixigo · A little space for play</title>
   <style>
@@ -28,6 +28,7 @@
     .satellite { position:absolute; width:28px; height:28px; border-radius:50%; background:#e5a787; top:8%; left:18%; box-shadow:0 0 0 7px var(--bg); }
     .satellite.small { width:16px; height:16px; top:auto; left:auto; bottom:17%; right:13%; background:#7893dc; }
     .game { background:#fff; border:1px solid var(--line); border-radius:20px; padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; }
+    .game + .game { margin-top:24px; }
     .game .eyebrow { margin:0 0 8px; }
     h2 { font-size:30px; letter-spacing:-.035em; line-height:1.2; margin:0 0 8px; }
     .game p:last-child { color:var(--muted); margin:0; }
@@ -50,24 +51,32 @@
 <body>
   <header class="wrap">
     <a class="brand" href="./" aria-label="Pixigo home">pixigo<span>.</span>ai</a>
-    <a href="privacy-policy/">Privacy policy</a>
+    <a href="#apps">Apps &amp; privacy</a>
   </header>
   <main class="wrap">
     <section class="hero" aria-labelledby="welcome">
       <div>
         <p class="eyebrow">Welcome to Pixigo</p>
         <h1 id="welcome">A little space<br>for play.</h1>
-        <p class="intro">Home to Magnetic Core, a puzzle game for curious minds.</p>
+        <p class="intro">Home to Magnetic Core and PixiGo Draw. A little space for puzzles and creativity.</p>
       </div>
       <div class="orbit" aria-hidden="true"><div class="core"></div><div class="satellite"></div><div class="satellite small"></div></div>
     </section>
-    <section class="game" aria-labelledby="game-title">
+    <section class="game" id="apps" aria-labelledby="game-title">
       <div>
         <p class="eyebrow">Our game</p>
         <h2 id="game-title">Magnetic Core</h2>
         <p>A puzzle game by Pixigo.</p>
       </div>
       <a class="policy-link" href="privacy-policy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="game" aria-labelledby="draw-title">
+      <div>
+        <p class="eyebrow">Our drawing app</p>
+        <h2 id="draw-title">PixiGo Draw</h2>
+        <p>A colorful canvas for creative minds.</p>
+      </div>
+      <a class="policy-link" href="draw/privacy-policy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
     </section>
   </main>
   <footer class="wrap">
