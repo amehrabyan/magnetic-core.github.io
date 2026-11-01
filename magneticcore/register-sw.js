@@ -1,0 +1,1 @@
+if ('serviceWorker' in navigator && !new URLSearchParams(location.search).has('preview')) window.addEventListener('load', () => { navigator.serviceWorker.register('/magneticcore/sw.js', { scope: '/magneticcore/' }).then(() => navigator.serviceWorker.ready).then(() => window.dispatchEvent(new Event('magneticcore-offline-ready'))).catch(() => {}); });

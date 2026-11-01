@@ -1,0 +1,27 @@
+{
+  "id": "/magneticcore/",
+  "name": "Magnetic Core",
+  "short_name": "Magnetic Core",
+  "description": "A little strategy. A big finish. Play Classic Field and Flux Rush.",
+  "start_url": "/magneticcore/",
+  "scope": "/magneticcore/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#e9f6f5",
+  "theme_color": "#07141c",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

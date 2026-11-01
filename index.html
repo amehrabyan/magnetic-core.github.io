@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pixigo — home to Magnetic Core and PixiGo Draw. Discover our apps and read their privacy policies.">
+  <meta name="description" content="Pixigo — home to Magnetic Core and PixiGo Draw. Play Magnetic Core free in your browser and discover our creative apps.">
   <meta name="theme-color" content="#f8faff">
   <title>Pixigo · A little space for play</title>
   <style>
@@ -33,6 +33,9 @@
     h2 { font-size:30px; letter-spacing:-.035em; line-height:1.2; margin:0 0 8px; }
     .game p:last-child { color:var(--muted); margin:0; }
     .policy-link { display:inline-flex; gap:24px; align-items:center; white-space:nowrap; font-weight:600; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:13px 20px; }
+    .game-actions { display:flex; flex-direction:column; gap:12px; align-items:flex-start; flex-shrink:0; }
+    .play-link { display:inline-flex; background:var(--blue); color:white; padding:13px 24px; border-radius:10px; font-weight:700; text-decoration:none; }
+    .game-actions > a:last-child { font-size:13px; }
     .policy-link:hover { background:#f0f4ff; border-color:#c4d1f1; }
     footer { padding-block:34px; margin-top:60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
     footer p { margin:0; }
@@ -66,9 +69,9 @@
       <div>
         <p class="eyebrow">Our game</p>
         <h2 id="game-title">Magnetic Core</h2>
-        <p>A puzzle game by Pixigo.</p>
+        <p>A little strategy. A big finish. Free magnetic block puzzles, right in your browser.</p>
       </div>
-      <a class="policy-link" href="privacy-policy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
+      <div class="game-actions"><a class="play-link" href="/magneticcore/">Play Magnetic Core <span aria-hidden="true">&nbsp;→</span></a><a href="privacy-policy/">Privacy policy</a></div>
     </section>
     <section class="game" aria-labelledby="draw-title">
       <div>
