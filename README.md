@@ -9,7 +9,7 @@ Pixigo's static public website. Cloudflare Pages deploys the root of `main`.
 - [AdMob authorized sellers](https://pixigo.ai/app-ads.txt)
 - [AdSense authorized sellers](https://pixigo.ai/ads.txt)
 
-The homepage lives in `index.html`, Magnetic Core's policy in
+The homepage lives in `index.html`; original game information and troubleshooting are available at `about/` and `support/`. A real `404.html` keeps invalid URLs from falling back to the game, and `sitemap.xml` lists the public pages. Magnetic Core's policy is in
 `privacy-policy/index.html`, and PixiGo Draw's policy in
 `draw/privacy-policy/index.html`.
 
@@ -47,7 +47,7 @@ inside the source repository's `native/` folder. Replace only this repository's
 `magneticcore/` directory with the resulting `native/dist/` files. Commit and push
 `main`; verify the live game's `release.json` matches the local export.
 
-The web release has a non-personalized AdSense display unit below the game,
+The web release has a non-personalized AdSense display unit within its written game guide,
 with Google privacy messages and a privacy-choices control. Purchases and
 Firebase analytics remain off. Ads only run on `pixigo.ai`, online and outside
 embeds; local/preview hosts and offline launches make no ad requests. Progress stays in
@@ -58,8 +58,7 @@ revalidation for the shell/service worker, while hashed assets can be cached.
 
 Keep `app-ads.txt` at the domain root for native apps and `ads.txt` for web ads.
 AdSense publisher: `pub-7231836006413404`; Magnetic Core display slot:
-`7954876512`. Auto ads remain off. Site approval was requested November 1, 2026;
-deployment does not imply approval or ad fill.
+`7954876512`. Auto ads remain off. The November 10 site review flagged low-value content and screens without publisher content. The November 13 remediation adds the static game guide, substantive homepage and support pages, and restricts ads to the guide. Deployment does not imply approval or ad fill.
 
 `functions/magneticcore/index.js` sets Google's supported nonce CSP for game
 HTML, overriding the conservative static fallback CSP in `_headers`.
@@ -69,3 +68,5 @@ Verify that each HTML response has a fresh CSP nonce matching every script tag.
 Use `wrangler pages dev .` to test the full Pages setup, and `?ads-preview=1` to
 inspect the placement without loading Google. The static GitHub Pages fallback
 has no nonce function; production advertising is intended for Cloudflare.
+
+The static game guide is sourced from `native/web/guide.html` in the game repository and packaged outside the React root. Always change the source and rebuild; editing only the generated export would be lost on deployment. Do not put ad units on the homepage, support, policy or error pages.

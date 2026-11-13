@@ -1,91 +1,11 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-adsense-account" content="ca-pub-7231836006413404">
-  <meta name="description" content="Pixigo — home to Magnetic Core and PixiGo Draw. Play Magnetic Core free in your browser and discover our creative apps.">
-  <meta name="theme-color" content="#f8faff">
-  <title>Pixigo · A little space for play</title>
-  <style>
-    :root { color-scheme:light; --ink:#1a2340; --muted:#566079; --blue:#365ac9; --line:#e4e8f0; --bg:#f8faff; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
-    a { color:var(--blue); text-underline-offset:4px; }
-    a:focus-visible { outline:3px solid #7e9af0; outline-offset:6px; }
-    .wrap { width:min(1080px,100% - 48px); margin-inline:auto; }
-    header { padding-block:30px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .brand { color:var(--ink); font-weight:800; font-size:24px; letter-spacing:-1px; text-decoration:none; }
-    .brand span { color:var(--blue); }
-    header > a:last-child { font-size:14px; text-decoration:none; }
-    .hero { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:48px; min-height:560px; padding-block:64px 96px; }
-    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; color:var(--blue); }
-    h1 { font-size:clamp(48px,6.5vw,78px); line-height:1.04; letter-spacing:-.065em; font-weight:750; margin:22px 0; max-width:650px; }
-    .intro { max-width:390px; font-size:19px; color:var(--muted); }
-    .orbit { position:relative; aspect-ratio:1; width:100%; max-width:390px; justify-self:center; border:1px solid #d7dff3; border-radius:50%; background:radial-gradient(circle,#dfe7ff 0,transparent 68%); }
-    .orbit::before,.orbit::after { content:""; position:absolute; border:1px solid #c4d1f1; border-radius:50%; inset:15%; }
-    .orbit::after { inset:30%; border-color:#a2b5e7; }
-    .core { position:absolute; inset:39%; border-radius:28%; background:var(--blue); transform:rotate(-16deg); box-shadow:10px 18px 35px #365ac92b, inset 2px 2px 2px #ffffff40; }
-    .satellite { position:absolute; width:28px; height:28px; border-radius:50%; background:#e5a787; top:8%; left:18%; box-shadow:0 0 0 7px var(--bg); }
-    .satellite.small { width:16px; height:16px; top:auto; left:auto; bottom:17%; right:13%; background:#7893dc; }
-    .game { background:#fff; border:1px solid var(--line); border-radius:20px; padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; }
-    .game + .game { margin-top:24px; }
-    .game .eyebrow { margin:0 0 8px; }
-    h2 { font-size:30px; letter-spacing:-.035em; line-height:1.2; margin:0 0 8px; }
-    .game p:last-child { color:var(--muted); margin:0; }
-    .policy-link { display:inline-flex; gap:24px; align-items:center; white-space:nowrap; font-weight:600; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:13px 20px; }
-    .game-actions { display:flex; flex-direction:column; gap:12px; align-items:flex-start; flex-shrink:0; }
-    .play-link { display:inline-flex; background:var(--blue); color:white; padding:13px 24px; border-radius:10px; font-weight:700; text-decoration:none; }
-    .game-actions > a:last-child { font-size:13px; }
-    .policy-link:hover { background:#f0f4ff; border-color:#c4d1f1; }
-    footer { padding-block:34px; margin-top:60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
-    footer p { margin:0; }
-    @media(max-width:680px) {
-      .wrap { width:calc(100% - 40px); }
-      header { padding-block:22px; }
-      .hero { grid-template-columns:1fr; gap:36px; min-height:0; padding-block:44px 52px; }
-      h1 { max-width:440px; }
-      .intro { font-size:17px; }
-      .orbit { max-width:260px; }
-      .game { align-items:flex-start; flex-direction:column; padding:28px; gap:24px; }
-      footer { margin-top:44px; flex-direction:column; gap:8px; }
-    }
-  </style>
-</head>
-<body>
-  <header class="wrap">
-    <a class="brand" href="./" aria-label="Pixigo home">pixigo<span>.</span>ai</a>
-    <a href="#apps">Apps &amp; privacy</a>
-  </header>
-  <main class="wrap">
-    <section class="hero" aria-labelledby="welcome">
-      <div>
-        <p class="eyebrow">Welcome to Pixigo</p>
-        <h1 id="welcome">A little space<br>for play.</h1>
-        <p class="intro">Home to Magnetic Core and PixiGo Draw. A little space for puzzles and creativity.</p>
-      </div>
-      <div class="orbit" aria-hidden="true"><div class="core"></div><div class="satellite"></div><div class="satellite small"></div></div>
-    </section>
-    <section class="game" id="apps" aria-labelledby="game-title">
-      <div>
-        <p class="eyebrow">Our game</p>
-        <h2 id="game-title">Magnetic Core</h2>
-        <p>A little strategy. A big finish. Free magnetic block puzzles, right in your browser.</p>
-      </div>
-      <div class="game-actions"><a class="play-link" href="/magneticcore/">Play Magnetic Core <span aria-hidden="true">&nbsp;→</span></a><a href="privacy-policy/">Privacy policy</a></div>
-    </section>
-    <section class="game" aria-labelledby="draw-title">
-      <div>
-        <p class="eyebrow">Our drawing app</p>
-        <h2 id="draw-title">PixiGo Draw</h2>
-        <p>A colorful canvas for creative minds.</p>
-      </div>
-      <a class="policy-link" href="draw/privacy-policy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
-    </section>
-  </main>
-  <footer class="wrap">
-    <p>© 2026 Pixigo</p>
-    <p>Privacy questions? <a href="mailto:privacy@pixigo.ai">privacy@pixigo.ai</a></p>
-  </footer>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixigo · Play Magnetic Core</title><meta name="description" content="Play Magnetic Core, an original magnetic block puzzle by Pixigo. Learn the rules, choose Classic or Flux Rush, and earn cosmetic themes."><meta name="google-adsense-account" content="ca-pub-7231836006413404"><link rel="canonical" href="https://pixigo.ai/">
+<link rel="stylesheet" href="/assets/site.css"><meta name="theme-color" content="#f8faff"></head>
+<body><header class="wrap"><a class="brand" href="/" aria-label="Pixigo home">pixigo<span>.</span>ai</a><nav aria-label="Main navigation"><a href="/magneticcore/">Play</a><a href="/magneticcore/#game-guide">Game guide</a><a href="/about/">About</a><a href="/support/">Support</a></nav></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="welcome"><div><p class="eyebrow">An original puzzle by Pixigo</p><h1 id="welcome">A little strategy.<br>A big finish.</h1><p class="intro">A crowded board. One well-placed magnet. A whole new opening. Magnetic Core combines block placement with push-and-pull moves that change the puzzle in front of you.</p><a class="play-link" href="/magneticcore/">Play Magnetic Core →</a><p>Free in your browser · No account required</p></div><img class="game-logo" src="/magneticcore/icon-512.png" width="310" height="310" alt="Magnetic Core game icon"></section>
+<section aria-labelledby="how-it-works"><p class="eyebrow">More than fitting shapes</p><h2 id="how-it-works">Plan the placement. Change the board.</h2><div class="cards"><article><h3>Place &amp; clear</h3><p>Fit pieces onto an 8 × 8 board. Complete a row or column to clear it. Work through all three pieces in your hand, keeping space for the next set.</p></article><article><h3>Push &amp; pull</h3><p>Positive cores push nearby blocks away; negative cores pull them closer. Use the preview to fill a gap or open room for a larger shape.</p></article><article><h3>Build a finish</h3><p>Consecutive clears build a combo. Earn a Finisher Core to clear three horizontal rows, including granite that ordinary magnets cannot move.</p></article></div><p><a href="/magneticcore/#game-guide">Read the rules and practical strategy guide →</a></p></section>
+<section class="content" aria-labelledby="modes"><h2 id="modes">Two ways to find your rhythm</h2><p><strong>Classic</strong> gives you time to think. Study the empty spaces and compare moves without a countdown. <strong>Flux Rush</strong> begins with two minutes and adds three seconds for each completed line. It rewards recognizing a good placement quickly, while still leaving room to play.</p><p>Both modes award Lightning Coins through completed runs. The Cosmetic Lab lets you preview and unlock themes, from glowing circuits and underwater effects to rainbow unicorns and a collapsing singularity. The browser game has no real-money purchases.</p><h2>Made for a quick break, with room to learn</h2><p>Use the in-game tutorial to practise the special pieces. Adjust music, sound and placement assistance in Settings. After the first online download is complete, you can install the game to your home screen and play offline.</p><p>Your scores, earned coins and themes are saved locally in the browser you use. They do not require an account or sync to other devices. Clearing browser data can remove them; our <a href="/support/">support page</a> explains storage, offline play and common fixes.</p><h2>About Pixigo</h2><p>Pixigo is the publishing brand operated by Aram Mehrabyan. This site is the home of our original Magnetic Core game and its practical guides. We build playful experiences around a clear interaction: here, placing a block changes more than the empty space it occupies.</p><p><a href="/about/">Meet the project</a> · <a href="/support/">Get help or report a problem</a></p></section>
+</main>
+<footer class="wrap"><p>© 2026 Pixigo · Aram Mehrabyan</p><nav aria-label="Footer"><a href="/privacy-policy/">Magnetic Core privacy</a><a href="/draw/privacy-policy/">PixiGo Draw privacy</a><a href="/support/">Contact &amp; support</a></nav></footer></body></html>

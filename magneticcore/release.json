@@ -1,8 +1,8 @@
 {
   "app": "Magnetic Core",
-  "webRelease": "7840d6119b7e5213",
+  "webRelease": "62d57c7dc7d0db80",
   "nativeVersion": "1.0.0",
-  "nativeBuildBaseline": 5,
+  "nativeBuildBaseline": 8,
   "ads": "adsense-display",
   "nonPersonalizedAds": true,
   "analytics": false
