@@ -40,7 +40,7 @@
       .game { align-items:flex-start; flex-direction:column; padding:28px; gap:24px; }
       footer { margin-top:44px; flex-direction:column; gap:8px; }
     }
-  
+
 nav { display:flex; flex-wrap:wrap; gap:14px 22px; }
 nav a { font-size:14px; text-decoration:none; }
 .content { padding:36px 0; max-width:800px; }
